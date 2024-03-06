@@ -6,7 +6,10 @@ on:
   push:
     branches:
       - sync2
-
+  schedule:
+    # Run this workflow every 5 minutes (the most frequent interval possible with GitHub Actions)
+    - cron: '*/5 * * * *'
+    
 jobs:
 
   repo-sync:
