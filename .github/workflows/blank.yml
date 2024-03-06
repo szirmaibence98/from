@@ -23,7 +23,7 @@ jobs:
       - name: repo-sync
         uses: repo-sync/github-sync@v2
         with:
-          source_repo: "https://github.com/szirmaibence98/too"
+          source_repo: "https://github.com/szirmaibence98/to"
           source_branch: "*"
           destination_branch: "*"
           github_token: "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"
