@@ -26,5 +26,5 @@ jobs:
           source_repo: "https://github.com/szirmaibence98/to"
           source_branch: "*"
           destination_branch: "*"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           sync_tags: "true"
