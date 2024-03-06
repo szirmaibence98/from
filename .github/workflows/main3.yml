@@ -1,0 +1,26 @@
+name: GitHub Repo Sync
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - sync2
+
+jobs:
+
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "https://github.com/szirmaibence98/from2"
+        source_branch: "*"
+        destination_branch: "*"
+        github_token: ${{ secrets.TOKEN }}
+        sync_tags: "true"
+
